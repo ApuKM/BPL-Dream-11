@@ -13,7 +13,9 @@ const PlayersContainer = ({ playersPromise, coin, setCoin }) => {
         {selectedType === "available" ? (
           <h2 className="text-3xl mb-4">Available Players</h2>
         ) : (
-          <h2 className="text-3xl mb-4">Selected Players</h2>
+          <h2 className="text-3xl mb-4">
+            Selected Players ({selectedPlayers.length}/{playersData.length})
+          </h2>
         )}
 
         <div className="flex items-center gap-0">
@@ -27,7 +29,7 @@ const PlayersContainer = ({ playersPromise, coin, setCoin }) => {
             onClick={() => setSelectedType("selected")}
             className={`btn border-r-success rounded-l-none rounded-r-xl ${selectedType === "selected" ? "bg-yellow-400" : ""}`}
           >
-            Selected (2 of 6)
+            Selected ({selectedPlayers.length})
           </button>
         </div>
       </div>
@@ -41,6 +43,7 @@ const PlayersContainer = ({ playersPromise, coin, setCoin }) => {
         />
       ) : (
         <SelectedPlayersContainer
+          setCoin={setCoin}
           selectedPlayers={selectedPlayers}
           setSelectedPlayers={setSelectedPlayers}
         />

@@ -3,6 +3,7 @@ import PlayersCard from "./PlayersCard";
 import SelectedPlayersContainer from "../selectedPlayers/SelectedPlayersContainer";
 
 const PlayersContainer = ({ playersPromise, coin, setCoin }) => {
+  const [selectedPlayers, setSelectedPlayers] = useState([]);
   const [selectedType, setSelectedType] = useState("available");
   const playersData = use(playersPromise);
   //   console.log(playersData);
@@ -31,9 +32,18 @@ const PlayersContainer = ({ playersPromise, coin, setCoin }) => {
         </div>
       </div>
       {selectedType === "available" ? (
-        <PlayersCard playersData={playersData} coin={coin} setCoin={setCoin} />
+        <PlayersCard
+          playersData={playersData}
+          coin={coin}
+          setCoin={setCoin}
+          selectedPlayers={selectedPlayers}
+          setSelectedPlayers={setSelectedPlayers}
+        />
       ) : (
-        <SelectedPlayersContainer />
+        <SelectedPlayersContainer
+          selectedPlayers={selectedPlayers}
+          setSelectedPlayers={setSelectedPlayers}
+        />
       )}
     </div>
   );

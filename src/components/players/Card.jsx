@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import { Flag, UserRound } from "lucide-react";
 
-const Card = ({ player, index, setCoin }) => {
+const Card = ({ player, index, setCoin, selectedPlayers, setSelectedPlayers }) => {
   const [isSelected, setIsSelected] = useState(false);
+
   const handleClick = (e) => {
     e.preventDefault();
     setCoin((prev) => {
       const newCoin = prev - player.price;
-
       if (newCoin < 0) {
         alert("You don't have enough coin");
         return prev;
       }
-
       return newCoin;
     });
+    setSelectedPlayers([...selectedPlayers, player]);
     setIsSelected(true);
   };
+
   return (
     <div>
       <div

@@ -1,9 +1,9 @@
 import React from "react";
 import currencyIcon from "/Currency.png";
 
-const Navbar = () => {
+const Navbar = ({coin}) => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,7 +51,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <a className="btn text-green-600 text-lg">
           <img src={currencyIcon} alt="" />
-          Coins
+          {coin} Coins
         </a>
       </div>
     </div>

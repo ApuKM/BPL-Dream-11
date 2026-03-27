@@ -1,0 +1,58 @@
+[
+  {
+    "playerName": "Virat Kohli",
+    "country": "India",
+    "playerType": "Batsman",
+    "battingStyle": "Right-hand bat",
+    "rating": 9.8,
+    "price": 1500000,
+    "image": "https://i.ibb.co.com/3mF67Wd6/Virat-Kohli-1-2025-12-f86c59dbd91075af4659d00c1813381b-scaled.avif"
+  },
+  {
+    "playerName": "Babar Azam",
+    "country": "Pakistan",
+    "playerType": "Batsman",
+    "battingStyle": "Right-hand bat",
+    "rating": 9.0,
+    "price": 1100000,
+    "image": "https://st3.cricketcountry.com/wp-content/uploads/2024/02/Babar-Azam-1.jpg"
+  },
+  {
+    "playerName": "Ben Stokes",
+    "country": "England",
+    "playerType": "All-rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm fast-medium",
+    "rating": 9.6,
+    "price": 1450000,
+    "image": "https://i.ibb.co.com/BKyn6w65/Benstockes.avif"
+  },
+  {
+    "playerName": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "playerType": "All-rounder",
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Slow left-arm orthodox",
+    "rating": 9.4,
+    "price": 1300000,
+    "image": "https://i.ibb.co.com/jv56VR1f/HD-wallpaper-shakib-al-hasan-ban-ban-vs-afg-bangladesh-icc-india-shakib-tamim-virat-kohli-wc19.jpg"
+  },
+  {
+    "playerName": "Pat Cummins",
+    "country": "Australia",
+    "playerType": "Bowler",
+    "bowlingStyle": "Right-arm fast",
+    "rating": 9.3,
+    "price": 1350000,
+    "image": "https://i.ibb.co.com/4RwFX6Gf/pat.webp"
+  },
+  {
+    "playerName": "Trent Boult",
+    "country": "New Zealand",
+    "playerType": "Bowler",
+    "bowlingStyle": "Left-arm fast-medium",
+    "rating": 9.1,
+    "price": 1200000,
+    "image": "https://i.ibb.co.com/mCbvscJH/trent.jpg"
+  }
+]

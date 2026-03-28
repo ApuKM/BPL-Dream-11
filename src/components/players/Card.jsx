@@ -1,21 +1,39 @@
 import React, { useState } from "react";
 import { Flag, UserRound } from "lucide-react";
+import { toast } from "react-toastify";
 
-const Card = ({ player, index, setCoin, selectedPlayers, setSelectedPlayers }) => {
+const Card = ({
+  player,
+  index,
+  coin,
+  setCoin,
+  selectedPlayers,
+  setSelectedPlayers,
+}) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const handleClick = (e) => {
     e.preventDefault();
-    setCoin((prev) => {
-      const newCoin = prev - player.price;
-      if (newCoin < 0) {
-        alert("You don't have enough coin");
-        return prev;
-      }
-      return newCoin;
-    });
-    setSelectedPlayers([...selectedPlayers, player]);
+    if (coin < player.price) {
+      toast.error("You don't have enough coin!", {
+        autoClose: 3000,
+      });
+      return;
+    }
+    const alreadySelected = selectedPlayers.some((p) => p.playerName === player.playerName);
+    if (alreadySelected) {
+      toast("Player already selected!", {
+        autoClose: 3000,
+      });
+      return;
+    }
+    setCoin((prev) => prev - player.price);
+    setSelectedPlayers((prev) => [...prev, player]);
     setIsSelected(true);
+
+    toast.success("Player selected!", {
+      autoClose: 3000,
+    });
   };
 
   return (
